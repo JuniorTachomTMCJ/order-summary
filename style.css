@@ -1,0 +1,183 @@
+:root {
+    --colour--primary--pale: hsl(225, 100%, 94%);
+    --colour--primary--clair: hsl(245, 75%, 52%);
+    --colour--secondary--very--pale: hsl(225, 100%, 98%);
+    --colour--secondary--desature: hsl(224, 23%, 55%);
+    --colour--secondary--fonce: hsl(223, 47%, 23%);
+    --opacity: 0.5;
+    --padding--box: 50px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: Poppins;
+}
+
+body {
+    height: 100vh;
+    background: url('./images/pattern-background-desktop.svg'), var(--colour--primary--pale);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card {
+    background-color: var(--colour--secondary--very--pale);
+    min-width: min-content;
+    width: 40%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 1px 6px 8px 0px #80808038;
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+.card__title {
+    color: var(--colour--secondary--fonce);
+    font-weight: 900;
+}
+
+.card__text {
+    opacity: var(--opacity);
+    font-size: 14px;
+}
+
+.card__content {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    padding: 10px var(--padding--box);
+    font-size: 14px;
+}
+
+.plan {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto 1fr;
+    column-gap: 7px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.plan__image {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+}
+
+.plan__title {
+    font-weight: 700;
+    color: var(--colour--secondary--fonce);
+    /* margin-bottom: 5px; */
+}
+
+.plan__decription {
+    opacity: var(--opacity);
+}
+
+.plan__action {
+    font-weight: 500;
+}
+
+.plan__action a {
+    color: var(--colour--primary--clair);
+    text-decoration: underline;
+}
+
+.plan__action {
+    justify-self: flex-end;
+}
+
+.card__action {
+    padding: 10px var(--padding--box);
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    row-gap: 16px;
+    font-size: 12px;
+}
+
+.btn {
+    display: block;
+    background-color: var(--colour--primary--clair);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-weight: 500;
+}
+
+.btn--primary {
+    box-shadow: 1px 6px 8px 0px #80808038;
+    transition: background-color 200ms ease;
+    -webkit-transition: background-color 200ms ease;
+    -moz-transition: background-color 200ms ease;
+    -ms-transition: background-color 200ms ease;
+    -o-transition: background-color 200ms ease;
+}
+
+.btn--primary:hover {
+    background-color: var(--colour--secondary--desature);
+}
+
+.btn--secondary {
+    background: none;
+    color: black;
+    opacity: var(--opacity);
+    transition: opacity 200ms ease, color 200ms ease;
+    -webkit-transition: opacity 200ms ease, color 200ms ease;
+    -moz-transition: opacity 200ms ease, color 200ms ease;
+    -ms-transition: opacity 200ms ease, color 200ms ease;
+    -o-transition: opacity 200ms ease, color 200ms ease;
+}
+
+.btn--secondary:hover {
+    color: var(--colour--secondary--fonce);
+    opacity: 1;
+}
+
+@media (max-width: 375px) {
+     :root {
+        --opacity: 0.5;
+        --padding--box: 10px;
+    }
+    body {
+        background: url('./images/pattern-background-mobile.svg'), var(--colour--primary--pale);
+    }
+}
