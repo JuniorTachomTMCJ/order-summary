@@ -43,7 +43,7 @@ a {
 .card {
     background-color: var(--colour--secondary--very--pale);
     min-width: min-content;
-    width: 40%;
+    width: 25%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -181,5 +181,9 @@ a {
         background: url('./images/pattern-background-mobile.svg'), var(--colour--primary--pale);
         background-size: contain;
         background-repeat: no-repeat;
+    }
+    .card {
+        min-width: min-content;
+        width: 80%;
     }
 }
