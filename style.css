@@ -179,5 +179,7 @@ a {
     }
     body {
         background: url('./images/pattern-background-mobile.svg'), var(--colour--primary--pale);
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
